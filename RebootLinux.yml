@@ -1,12 +1,11 @@
 ---
 
-# make this the last play, it might reboot the server
+# Reboots the server unless the end of line 8 and 9 are enabled, wait for 95 seconds and check server.
 - hosts: all
   become: yes
   tasks:
     - name: Reboot required
-      shell: ( /bin/sleep 5 ; shutdown -r now "Ansible updates triggered" ) 
-      #&
+      shell: ( /bin/sleep 5 ; shutdown -r now "Ansible updates triggered" ) #&
       #      removes=/var/run/reboot-required
       async: 30
       poll: 0
@@ -15,5 +14,5 @@
         - waiting for server to come back
   handlers:
     - name: waiting for server to come back
-      local_action: wait_for host={{ inventory_hostname }} port=22 state=started delay=10 timeout=85
+      local_action: wait_for host={{ inventory_hostname }} port=22 state=started delay=10 timeout=95
       become: no
