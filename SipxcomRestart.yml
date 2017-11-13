@@ -1,0 +1,4 @@
+# Restart the sipxcom service no matter what
+- service:
+    name: sipexecs
+    state: restarted
