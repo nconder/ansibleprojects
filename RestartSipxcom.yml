@@ -3,5 +3,6 @@
   become: yes
   tasks:
 # Restart the sipxcom service no matter what
-- name: restart sipexecs
-  service: name=sipexecs state=restarted
+handlers:
+  - name: restart sipexecs
+    service: name=sipexecs state=restarted
