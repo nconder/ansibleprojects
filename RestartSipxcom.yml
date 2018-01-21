@@ -1,8 +1,8 @@
 ---
 - hosts: all
-  become: yes
+#  become: yes
   tasks:
 # Restart the sipxcom service no matter what
-tasks:
+handlers:
   - name: restart sipexecs
     service: name=sipexecs state=restarted
