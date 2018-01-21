@@ -4,5 +4,5 @@
 #  tasks:
 # Restart the sipxcom service no matter what
   handlers:
-    - name: restart sipexecs
-      service: name=sipexecs state=restarted
+    - name: restart sipxecs
+      service: name=sipxecs state=restarted
