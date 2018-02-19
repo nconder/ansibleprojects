@@ -1,8 +1,11 @@
 ---
+- name: sipxecs
 - hosts: all
 #  become: yes
 #  tasks:
 # Restart the sipxcom service no matter what
   handlers:
     - name: restart sipxecs
-      service: name=sipxecs state=restarted
+      service: name=sipxecs
+               enabled=yes
+               state=restarted
