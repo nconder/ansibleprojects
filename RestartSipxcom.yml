@@ -1,6 +1,6 @@
 ---
 - name: sipxecs
-- hosts: all
+- hosts: sip1
 #  become: yes
 #  tasks:
 # Restart the sipxcom service no matter what
