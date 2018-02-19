@@ -1,8 +1,8 @@
 ---
-- name: sipxecs
-- hosts: sip1.hsh1.com
+- name: restart sipxecs
+  hosts: sip1.hsh1.com
 handlers:
   - name: restart sipxecs
-      service: name=sipxecs
-               enabled=yes
-               state=restarted
+    service: name=sipxecs
+             enabled=yes
+             state=restarted
